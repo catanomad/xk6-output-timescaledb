@@ -1,4 +1,4 @@
-module github.com/grafana/xk6-output-timescaledb
+module github.com/catanomad/xk6-output-timescaledb
 
 go 1.25.0
 

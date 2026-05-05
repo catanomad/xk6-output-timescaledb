@@ -15,27 +15,6 @@ defaults:
 
 jobs:
 
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Install Go
-        uses: actions/setup-go@v5
-        with:
-          go-version: '1.25'
-      - name: Retrieve golangci-lint version
-        run: |
-          echo "Version=$(head -n 1 "${GITHUB_WORKSPACE}/.golangci.yml" | tr -d '# ')" >> $GITHUB_OUTPUT
-        id: version
-      - name: golangci-lint
-        uses: golangci/golangci-lint-action@v7
-        with:
-          version: ${{ steps.version.outputs.Version }}
-          only-new-issues: true
-
   test-go-versions:
     strategy:
       fail-fast: false

@@ -12,7 +12,7 @@ You will need [go](https://golang.org/)
 go install go.k6.io/xk6/cmd/xk6@latest
 
 # Build the k6 binary
-xk6 build --with github.com/grafana/xk6-output-timescaledb
+xk6 build --with github.com/catanomad/xk6-output-timescaledb
 
 ... [INFO] Build environment ready
 ... [INFO] Building k6
